@@ -1,0 +1,142 @@
+1.	Što je CSS?
+Cascading Style Sheets je kao i HTML klijentski jezik za web razvoj koji daje upute web pregledniku u kojem formatu da prikaže HTML elemente u web sučelju.
+
+2.	Navedite osnovne dijelove CSS pravila.
+Selektor, svojstvo, vrijednost
+
+3.	Na koje sve načine možemo primijeniti CSS na HTML?
+Možemo primijeniti unutarnji ili vanjski CSS.
+
+4.	Koji je aktualni CSS standard?
+CSS3 (kompatibilan s prijašnjim verzijama)
+
+5.	Kako i zašto koristimo oznake proizvođača web preglednika?
+Razvoj CSS-a podijeljen je na module, neki se koriste službeno dok je drugi dio samo umjereno stabilan za uporabu. Dok se ne usvoje kao dio web standarda za postavljanje svojstva moramo koristiti oznake proizvođača web preglednika (npr. -webkit- za chrome, safari, opera)
+
+6.	Na koje sve načine možemo definirati boju unutar CSS-a?
+Nazivom boje (red, blue…), vrijednošću boje (255,0,0 crvena…), heksadecimalnim kodom boje (#FF0000 crvena), hsl zapisom (0,100%,75% svijetlo crvena boja)
+
+7.	Opišite osnovne vrste fontova – generički fontovi.
+Serifni - mali ukrasi na rubovima znaka, najviše se koriste za ispis povećanih dijelova teksta (Times New Roman)
+Neserifni - nema rubne ukrase (povećana čitljivost), ispis većeg dijela sadržaja web stranica (Arial, Verdana…)
+Ukošeni, dekorativni i fontovi fiksne širine
+
+8.	Koja svojstva koristimo za uređivanje fonta znakova (stil i dizajn znakova)?
+font-family, @font-face, font-size, font-weight, font-style, line-height, text-align, text-decoration, text-transform, letter-spacing itd.
+
+9.	Na koje sve načine možemo uređivati tekst (razmještaj i format znakova)?
+text-align, text-indent, text-transform, text-decoration, letter-spacing, word-spacing…
+nsku boju koristimo komandu background-color (skraćeno bg-color itd. itd.). Da bude transparentna samo dodamo broj koliko da bude transparentno npr. bg-color: rgba(255, 0, 0, 0.5) 0.5 stoji za 50% transparentnosti.
+
+10.	Koje svojstvo koristimo za primjenu pozadinske slike?
+background-image (bg-image). Primjer: bg-image: url(‘putanja do slike’)
+
+11.	Na koje parametre pozadinske slike možemo utjecati?
+Poziciju, veličinu, način postavljanja, dali je fixna ili floata sa sadržajem, način miješanja boja pojedinih slojeva sa pozadinom itd.
+
+12.	Koja je inicijalna pozicija pozadinske slike?
+Inicijalna pozicija pozadinske slike u CSS-u je background-position: 0% 0%;. To znači da se slika pozicionira u gornjem lijevom uglu elementa.
+
+13.	Možemo li određivati dimenzije pozadinske slike i na koje načine?
+Možemo komandom background-size (bg-size). Postoji cover (zauzme cijelu pozadinu), contain (skalira da se u potpunosti uklopi u element, čuva omjer slike). Specifične dimenzije tipa bg-size: 300px 200px;; 50% 50%;; 10em 5em;; 50vw 50vh;;
+
+14.	Koje vrste gradijenta postoje u CSS-u?
+Linearni - pravocrtni smjer
+Radijalni - koncentrični smjer u odnosu na postavljen centar
+Konusni - rotacija tranzicije boja oko zadanog centra
+
+15.	Opišite ukratko box model
+Box model je temeljni koncept u CSS-u koji opisuje kako se elementi prikazuju na web stranici.
+
+16.	Što određuju svojstva width i height?
+Određuju širinu i visinu elementa/boxa
+
+17.	Što određuje svojstvo padding?
+Svojstvo padding u CSS-u određuje prostor unutar elementa, između sadržaja elementa i njegovog okvira (border).
+
+18.	Što je margina elementa?
+Određuje prostor izvan elementa, između njegovog okvira (border) i susjednih elemenata.
+
+19.	Koji je zadani način kako web preglednici računaju dimenzije HTML elemenata?
+Putem standard box modela. Ukupna širina i visina elementa se zbroje sa visinom i širinom sadržaja, padding i border.
+
+20.	Opišite dvije osnovne skupine HTML elemenata te objasnite kako se ovo svojstvo može promijeniti.
+Blok elementi i inline elementi. Mogu se promijeniti koristeći CSS svojstvo display. To svojstvo omogućuje kontrolu nad načinom na koji se elementi prikazuju i ponašaju u rasporedu.
+
+21.	Što omogućuje CSS tehnika Flexbox?
+Omogućuje fleksibilan i efikasan način za stvaranje kompleksnih rasporeda i dizajna na web stranicama
+
+22.	Što predstavlja fleksibilan spremnik (Flex-container), a što fleksibilan element (Flex-item)?
+Flex-container -  element koji postaje fleksibilni kontejner kada mu se dodijeli svojstvo display: flex; ili display: inline-flex;. Ovaj element postaje roditeljski kontejner za sve svoje direktne potomke, koji postaju fleksibilni elementi.
+Flex-item - Fleksibilni elementi su direktni potomci fleksibilnog kontejnera. Oni nasljeđuju svojstva fleksibilnog kontejnera i mogu imati dodatna svojstva koja utječu na njihov raspored i veličinu.
+
+23.	Kako definiramo fleksibilan spremnik?
+Definira se dodjeljivanjem svojstva display: flex; ili display: inline-flex; HTML elementu. Ovo svojstvo pretvara element u fleksibilni kontejner, a sve njegove direktne potomke postaju fleksibilni elementi (flex items).
+
+24.	Koji je zadani smjer raspoređivanja elemenata u fleksibilnom spremniku te kako se on može promijeniti?
+Dd lijevo na desno. Ovaj smjer se može promijeniti koristeći CSS svojstvo flex-direction.
+
+25.	Koje svojstvo omogućuje raspoređivanje elemenata u više redova / stupaca?
+Koristi se svojstvo flex-wrap. Ovo svojstvo određuje da li će se fleksibilni elementi prelaziti u novi red kada nema dovoljno prostora u trenutnom redu ili stupcu.
+
+26.	Koja svojstva određuju poravnanje elemenata po glavnoj i poprečnoj osi te raspodjelu slobodnog prostora?
+justify-content , align-items , align-content
+
+27.	Kako možemo zadati dimenzije fleksibilnog elementa po glavnoj osi?
+Koristeći flex-basis. Ovo svojstvo određuje početnu veličinu fleksibilnog elementa prije nego što se primijene svojstva flex-grow i flex-shrink.
+
+28.	Navedite i opišite nekoliko metoda transformacija.
+2D transformacije - traslate(x,y), rotate(deg), scale(x,y), skew(deg)...
+3D transformacije - rotatex(deg), rotatey(deg)
+
+29.	Što omogućuju tranzicije?
+Omogućuje prijelaz elementa iz jednog stila u drugi, koji se
+odvija postepeno u zadanom vremenskom trajanju
+
+30.	Koje parametre je moguće postaviti tranziciji?
+transition-property , transition-duration , transition-delay , transition-timing-function
+
+31.	Što su CSS animacije?
+CSS animacije omogućuju stvaranje kompleksnih animacija koje se mogu primijeniti na HTML elemente. Za razliku od tranzicija, koje su jednostavnije i koriste se za animiranje promjena svojstava između dvije stanja, CSS animacije omogućuju više kontrole i fleksibilnosti.
+
+32.	Opišite dva osnovna koraka za definiciju CSS animacija.
+Prvi korak - pravilo @keyframes
+- definira samu animaciju, njezine ključne kadrove i svojstva koja se animiraju 
+Drugi korak - svojstvo animation
+- dodjeljuje animaciju određenom elementu i definira kako je animiran
+
+33.	Objasnite što predstavlja tok dokumenta. Koja metoda pozicioniranje je unaprijed zadana za HTML elemente?
+Tok dokumenta predstavlja zadani raspored HTML elemenata. Zadana metoda je da se elementi pozicioniraju prema toku sadržaja HTML dokumenta te pomaci nemaju efekta na statičan element.
+
+34.	Koju metodu pozicioniranja koristimo ako želimo HTML element pozicionirati (pomaknuti) prema njegovoj statičnoj (normalnoj) poziciji?
+Koristimo metodu pozicioniranja relative. Ova metoda omogućuje elementu da se pozicionira relativno u odnosu na svoju normalnu poziciju u dokumentu.
+
+35.	Koja metoda pozicioniranja omogućuje pozicioniranje HTML elementa prema granicama prvog elementa pretka, čija pozicija nije statična?
+Kada postavimo position: absolute; na element, element se pozicionira u odnosu na najbližeg predka čija pozicija nije static. Ako takav predački element ne postoji, element se pozicionira u odnosu na <html> element (tj. u odnosu na prozor preglednika).
+
+36.	Koja je razlika između fiksnog i ljepljivog pozicioniranja?
+Fiksno se pozicionira prema prozoru web preglednika a ljepljivo se pozicionira ovisno o pomaku sadržaja stranice, element bude pozicioniran relativno ili fiksno.
+
+37.	Na koji način se koristi CSS svojstvo z-index?
+Koristi se za kontrolu položaja elemenata duž z-osi, odnosno za određivanje koji element će se prikazati ispred ili iza drugih elemenata kada se preklapaju.
+
+38.	Objasnite što su plutajući elementi te navedite primjere gdje se oni koriste.
+Omogućuju pozicioniranje elemenata na lijevi ili desni rub njihova elementa roditelja, uklanja se iz normalnog toka dokumenta te se ostali sadržaj omota oko float elementa.
+Primjeri: omotavanje teksta oko slika, navigacijaski meni
+
+39.	Čemu služi CSS svojstvo clear?
+Koristi se za sprečavanje plutajućih elemenata da utječu na element koji slijedi nakon njih. Ovo svojstvo je posebno korisno kada želite "očistiti" plutajuće elemente i vratiti normalan tok dokumenta, sprečavajući tako neželjena preklapanja ili rasporede.
+
+40.	Objasnite kada je web rješenje responzivno.
+Kad se automatski prilagođava tipu i karakteristikama medija putem kojeg se koristi.
+Kada omogućava dobro korisničko iskustvo, bez obzira na medij koji se koristi za pregledavanje
+
+41.	Što predstavlja viewport? Što je potrebno postaviti preko istoimenog metapodatka svakoj HTML datoteci?
+Viewport je korisniku vidljivo područje web stranice.Moramo postaviti početni zoom (na 1.0) i širinu viewporta na širinu uređaja
+
+42.	Objasnite na koji način se koristi @media pravilo za postizanje responzivnog dizajna.
+Koristi se za stvaranje responzivnog dizajna tako da omogućuje primjenu različitih stilova ovisno o karakteristikama uređaja, kao što su širina ekrana, orijentacija, rezolucija i drugo.
+
+43.	Navedite smjernice za postizanje responzivnog web dizajna.
+Koristiti fleksibilne jedinice, koristiti CSS flexbox i grid, koristiti media queries, uporaba responzivnih slika, postaviti viewport, responzivna navigacija, optimizacija preformansi, koristiti responzivan framework (npr. bootstrap)
+

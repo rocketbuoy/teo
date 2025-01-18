@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Što je HTML te koja je aktualna verzija HTML jezika?
+HTML (HyperText Markup Language) je standardni jezik za kreiranje web stranica i web aplikacija. Koristi se za strukturiranje i prikazivanje sadržaja na webu, uključujući tekst, slike, video zapise i druge multimedijalne elemente. HTML omogućava povezivanje stranica putem hiperveza, što čini web pretraživanje dinamičnim i interaktivnim.
+Aktualna verzija HTML jezika je HTML5
+
+
+0.	Što je HTML element te od čega se sastoji?
+HTML element je osnovna gradivna jedinica HTML dokumenta. 
+	Svaki HTML element sastoji se od tri dijela:
+1.	Početna oznaka (start tag): Ova oznaka označava početak elementa i obično sadrži ime elementa unutar uglatih zagrada. Na primjer, <p> je početna oznaka za paragraf.
+2.	Sadržaj (content): Ovo je dio između početne i završne oznake. Sadržaj može biti tekst, drugi HTML elementi ili prazan prostor. Na primjer, tekst unutar paragrafa.
+3.	Završna oznaka (end tag): Ova oznaka označava kraj elementa i također sadrži ime elementa unutar uglatih zagrada, ali s kosom crtom ispred imena. Na primjer, </p> je završna oznaka za paragraf.
+
+	
+3.Što su atributi?
+Atributi u HTML-u su dodatni informaciji koje se mogu dodati HTML elementima kako bi se definirala njihova ponašanja, izgled ili funkcionalnost. Atributi se nalaze unutar početne oznake elementa i obično imaju oblik ime_atributa="vrijednost".
+
+Primjer: <a href="https://www.primjer.com" target="_blank">Posjeti web stranicu</a>
+
+
+4.	Koji elementi čine osnovnu strukturu HTML dokumenta?
+<!DOCTYPE html>: Deklaracija tipa dokumenta koja definira verziju HTML-a. Za HTML5, ovo je obavezno i piše se na samom početku dokumenta.
+<html>: Korijenski element koji obuhvaća cijeli HTML dokument. Sadrži sve ostale elemente.
+<head>: Sadrži metapodatke o dokumentu, kao što su naslov stranice, poveznice na stilove (CSS), skripte (JavaScript), i druge konfiguracije. Ne prikazuje se direktno na stranici.
+<title>: Definira naslov dokumenta koji se prikazuje u naslovnoj traci preglednika ili na kartici preglednika.
+<body>: Sadrži sadržaj dokumenta koji se prikazuje u pregledniku. Ovo uključuje tekst, slike, video zapise, tablice i druge elemente.
+
+
+0.	U koje dvije osnovne skupine dijelimo HTML elemente i koja je glavna razlika između njih?
+Dijelimo ih u redne i inline elemente.
+Glavna razlika između blokovnih i inline elemenata je u načinu na koji se prikazuju:
+Blokovni elementi započinju na novom retku i zauzimaju cijelu širinu roditeljskog elementa.
+Inline elementi ne započinju na novom retku i ne zauzimaju cijelu širinu roditeljskog elementa, već se prikazuju unutar teksta.
+
+6. 	Objasnite kako se vrši objavljivanje video i audio sadržaja na web stranici putem HTML5 standarda te opišite prednosti koje nosi takav način rada.
+Unutar elementa <source src=”” type=”” /> navodi se lokacija datoteke i oznaka njenog tipa (<video></video> i <audio></audio> elementi).
+Za lokaciju datoteke se može koristiti relativna putanja (preporučljivo) i apsolutna putanja.
+Primjer objave:
+<video width="640" height="360" controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Vaš preglednik ne podržava video element.
+</video>
+Preporuča se korištenje atributa width i height uvijek
+
+7.	Koje formate video i audio datoteka koristimo? Ako morate odabrati jedan format za video i jedan format za audio sadržaj, koji bi to bio?
+video - mp4
+audio -  mp3
+Zašto?
+• daju optimalan odnos kvalitete i veličine datoteka
+• podržavaju ih svi moderni web preglednici
+
+
+8.	Opišite namjenu ostalih elemenata za objavljivanje medijskog sadržaja na web stranicama (object, embed, iframe).
+Osim <video> i <audio> elemenata, HTML nudi i druge elemente za objavljivanje medijskog sadržaja na web stranicama: <object>, <embed> i <iframe>. Svaki od ovih elemenata ima svoju specifičnu namjenu i prednosti.
+ <object> Element
+<object> element se koristi za ugrađivanje vanjskih resursa, kao što su dokumenti, slike, videozapisi, audio zapisi, ili drugi interaktivni sadržaji. On je vrlo fleksibilan i može se koristiti za ugrađivanje raznih vrsta sadržaja.
+Primjer korištenja <object> elementa:
+<object data="dokument.pdf" type="application/pdf" width="600" height="400">
+    Vaš preglednik ne podržava prikaz PDF dokumenata.
+</object>
+●	data: Definira URL ili putanju do resursa koji se ugrađuje.
+●	type: Definira MIME tip resursa.
+●	width i height: Definiraju dimenzije ugrađenog sadržaja.
+●	Tekst unutar <object> elementa se prikazuje ako preglednik ne podržava ugrađivanje resursa.
+<embed> Element
+<embed> element se koristi za ugrađivanje vanjskih interaktivnih sadržaja ili plug-inova, kao što su Flash animacije, PDF dokumenti, ili drugi multimedijalni sadržaji. Ovaj element je manje fleksibilan od <object> elementa, ali je jednostavan za korištenje.
+Primjer korištenja <embed> elementa:
+<embed src="video.mp4" type="video/mp4" width="600" height="400">
+●	src: Definira URL ili putanju do resursa koji se ugrađuje.
+●	type: Definira MIME tip resursa.
+●	width i height: Definiraju dimenzije ugrađenog sadržaja.
+ <iframe> Element
+<iframe> element se koristi za ugrađivanje drugih HTML dokumenata unutar trenutnog dokumenta. To omogućava prikazivanje vanjskih web stranica, interaktivnih karata, videozapisa s platformi kao što je YouTube, i drugih sadržaja.
+Primjer korištenja <iframe> elementa:
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315" allowfullscreen></iframe>
+src: Definira URL stranice koja se ugrađuje.
+width i height: Definiraju dimenzije ugrađenog sadržaja.
+allowfullscreen: Omogućava prikazivanje ugrađenog sadržaja u punom ekranu.
+
+
+
+9.	Koji element koristimo za izradu poveznica?
+<a></a>
+
+10.	Koji su njegovi atributi i koji je od njih obavezan? Zašto?
+href atribut je obvezan - on definira URL na koji vodi poveznica, bez njega poveznica ne bi imala destinaciju
+Ima još atribute poput target, title, rel, download…
+
+11.	Kako omogućiti otvaranje poveznice u novoj kartici internetskog preglednika?
+Da bi se omogućilo otvaranje poveznice u novoj kartici internetskog preglednika, koristi se target atribut unutar <a> elementa s vrijednošću _blank. Ovo će reći pregledniku da otvori poveznicu u novoj kartici ili prozoru.
+
+    12.	Ukratko opišite četiri tipa poveznica. 
+Vanjska poveznica:
+Opis: Vodi na stranicu koja se nalazi na drugom web mjestu ili domeni.
+           Primjer:
+<a href="https://www.primjer.com">Posjeti primjer.com</a>
+Namjena: Koristi se za povezivanje na vanjske resurse, druge web stranice, ili dokumente koji nisu dio trenutne web stranice.
+Unutarnja poveznica:
+Opis: Vodi na drugu stranicu unutar iste web aplikacije ili domene.
+Primjer:
+<a href="/kontakt">Kontakt</a>
+Namjena: Koristi se za navigaciju unutar iste web stranice ili aplikacije, omogućujući korisnicima da lako pristupe različitim dijelovima sadržaja.
+Poveznica na dio stranice (anchor link):
+Opis: Vodi na određeni dio iste stranice, obično označen s id atributom.
+Primjer:<a href="#sekcija1">Idi na sekciju 1</a>
+<h2 id="sekcija1">Sekcija 1</h2>
+Namjena: Koristi se za brzu navigaciju unutar dužih stranica, omogućujući korisnicima da brzo pristupe određenim sekcijama sadržaja.
+Poveznica za slanje e-pošte (mailto link):
+Opis: Otvara program za e-poštu korisnika s predodređenom e-mail adresom i mogućnošću predodređenog naslova i tijela poruke.
+Primjer:
+<a href="mailto:korisnik@primjer.com">Pošalji e-mail</a>
+Namjena: Koristi se za olakšavanje komunikacije s korisnicima, omogućujući im da lako pošalju e-mail direktno s web stranice.
+
+13.	Navedite pet standardnih formata grafičkih datoteka za web.
+JPEG, GIF, PNG, SVG, WebP
+
+14.	Koje elemente koristimo za ugradnju grafika u HTML dokument? 
+<img> ; <figure> ; <canvas> ; <svg> ; <picture>
+
+    15.	Koji atribut elementa img je obavezan za ugradnju grafike?
+src=”putanja do slike” alt=”opis slike”
+
+16.	Na koji način možemo definirati adresu slike?
+Apsolutna - sadrži URL adresu grafike smještene u vanjskoj web domeni
+Relativna - putanja do HTML dokumenta u kojem želimo prikazati sliku, do same slike, dohvaća se iz naše web mape
+
+17.	Što omogućuju elementi svg i canvas te koja je razlika između njih?
+svg - vektorska grafika
+canvas - rasterska grafika
+
+18.	Objasnite što su metapodaci te nabrojite najčešće korištene.
+Metapodaci u HTML-u su informacije o dokumentu koje nisu vidljive korisnicima, ali pružaju važne detalje za preglednike i pretraživače. Nalaze se unutar <head> elementa i koriste se za opisivanje sadržaja, postavljanje konfiguracija i poboljšanje SEO-a. tipa <author>, <keywords>, <description>, <charset>, <viewport>
+
+    19.	Koliko razina naslova postoji u HTML-u?
+h1 - h6
+
+20.	Koja je razlika između elemenata <p> i <pre>?
+<p> - prikazuje se kao običan paragraf, s automatskim prelaskom u novi red na kraju paragrafa
+<pre> - unaprijed predformatirani tekst, prikazuje se točno onako kako je napisan, čuvajući sve razmake, nove redove i tabulatore
+
+    21.	Kako kreiramo novi red teksta?
+<br>
+
+22.	Na koje sve načine možemo prikazati deblje otisnuti tekst?
+<b></b> koji samo podeblja tekst i <strong></strong> koji podeblja tekst i označava kao važan tj. ističe ga
+
+23.	Koje vrste lista razlikujemo?
+Simboljička (<ul> <li> </ul>) ; brojčana (<ol> <li> </ol>) ; opisna (<dl> <dt> <dd> </dl>)
+
+    24.	Koje elemente koristimo za strukturiranje tablica?
+<table></table> - definiranje tablice
+<tr></tr> - definiranje reda tablice 
+<th></th> - ćelija zaglavlja tablice 
+<td></td> ćelija s podacima tablice
+<caption></caption> - definiranje naslova tablice
+
+25.	Koja je razlika između elemenata <th></th> i <td></td>?
+<th> se koristi za ćeliju zaglavlja tablice 
+<td> se koristi za ćelije s podacima tablice
+
+    26.	Kako možemo kreirati naslov tablice?
+Za kreiranje naslova tablice u HTML-u koristimo <caption> element. Ovaj element se stavlja unutar <table> elementa i pruža naslov ili opis tablice.
+
+    27.	Koje atribute koristimo za spajanje ćelija?
+colspan - spaja na razini reda (vodoravno)
+rowspan - spaja na razini stupca (okomito)
+
+28.	Čemu služe obrasci (forme)?
+Omogućuju unos ili ažuriranje podataka od strane korisnika web
+rješenja, koji se šalju na poslužitelj i tamo obrađuju.
+
+29.	Koji je osnovni element za kreiranje obrazaca? Koje atribute standardno dodjeljujemo tom elementu?
+<form></form>
+Atributi: action, method, enctype, name, target
+
+30.	Navedite nekoliko mogućih tipova <input /> elementa.
+text, password, checkbox, radio, file, button, image, reset, submit, hidden
+
+31.	Koji element koristimo za kreiranje polja za unos više linija teksta? Kako kreiramo padajuće liste s ponuđenim vrijednostima?
+Za kreiranje polja za unos više linija teksta koristimo <textarea> element. Za kreiranje padajućih lista s ponuđenim vrijednostima koristimo <select> element u kombinaciji s <option> elementima.
+
+    32.	Kojim elementom kreiramo gumb za potvrđivanje obrasca?
+Za kreiranje gumba za potvrđivanje obrasca koristimo <button> element s atributom type postavljenim na "submit". Ovaj gumb šalje podatke obrasca kada se klikne.
+<form action="/submit" method="post">
+  <button type="submit">Pošalji</button>
+</form>
+33.	Čemu služi atribut required? 
+Taj atribut označava da je polje za koje je naveden atribut obavezan unos/odabir podataka.
+
+34.	Opišite karakteristike web servisa. Koja je razlika između web stranice i web sjedišta?
+Glavne karakteristike uključuju interoperabilnost, standardizirane protokole (npr. SOAP, REST), platformsku nezavisnost, skalabilnost i sigurnost.
+
+35.	Što predstavlja URL adresa te od čega se ona sastoji?
+Uniform Resource Identifier je jedinstve
+
+36.	Opišite funkciju HTTP protokola te objasnite što predstavlja klijent, a što  poslužitelj (server).
+Predstavlja lokaciju resursa na internetu i omogućava pristup tom resursu. URL se sastoji od nekoliko komponenti, uključujući shemu, domenu, putanju, upitne parametre i fragment
+
+37.	Ukratko opišite funkciju pojedinih računalnih jezika strane klijenta.
+HTML (HyperText Markup Language):
+Funkcija: Definira strukturu i sadržaj web stranice. Koristi se za označavanje elemenata kao što su naslovi, paragrafi, linkovi, slike i tablice.
+CSS (Cascading Style Sheets):
+Funkcija: Definira stil i izgled web stranice. Koristi se za kontrolu boja, fontova, rasporeda, margina, paddinga i drugih vizualnih aspekata.
+JavaScript:
+Funkcija: Dodaje interaktivnost i dinamičnost web stranici. Koristi se za manipulaciju DOM-a, obradu događaja, slanje i primanje podataka s poslužitelja, te izvođenje raznih skripti na strani klijenta.
+
+
+38.	Što omogućuju računalni jezici strane poslužitelja u web razvoju?
+Računalni jezici strane poslužitelja u web razvoju omogućuju obradu podataka, upravljanje bazama podataka, stvaranje dinamičkog sadržaja i komunikaciju s klijentskim stranama.
+
+39.	Navedite i ukratko opišite karakteristike kvalitetnog web rješenja.
+-User friendly:
+            Intuitivno i jednostavno za korištenje, s jasnom navigacijom i razumljivim sadržajem.
+-Loading speed:
+Brzo učitavanje stranica i optimiziran performans za bolje korisničko iskustvo.
+-Sigurnost:
+Zaštita podataka korisnika i prevencija sigurnosnih ranjivosti.
+-Pristupačnost:
+Dostupno svim korisnicima, uključujući one s invaliditetom, koristeći pristupačne tehnologije.
+-SEO optimizacija:
+Dobro optimizirano za pretraživače kako bi se poboljšao rang na rezultatima pretraživanja.
+-Laka održivost:
+Čist i organiziran kod koji olakšava ažuriranja i održavanje.
+-Responsivni dizajn:
+Prilagođen prikaz na različitim uređajima i veličinama ekrana.
+-Skalabilnost:
+Sposobnost rasta i prilagodbe povećanom broju korisnika i zahtjevima.
+
+40.	Navedite i ukratko opišite pet kategorija elemenata web rješenja.
+-Strukturalni elementi:
+Definiraju osnovnu strukturu web stranice 
+-Sadržajni elementi:
+Sadrže tekstualni i medijski sadržaj
+-Interaktivni elementi:
+Omogućavaju korisničku interakciju 
+-Stilski elementi:
+Definiraju izgled i stil web stranice 
+-Meta elementi:
+Pružaju metapodatke o web stranici
+41.	Što uključuje moderni pristup izradi web rješenja?
+Razdvojiti strukturu i sadržaj dokumenta od njegova stila
+• prilagoditi web rješenje za različite platforme i profile korisnika
+• smisleno i planski postaviti strukturu dokumenta, kako bi se
+               osigurao:
+• pregledniji i lakši za održavanje kod
+• lakše upravljanje web stranicom
+• dodjeljivanje stila sadržaju, postavljanje responzivne strukture dokumenta itd.
+• brže učitavanje i prikazivanje u web pregledniku
+42. Zašto strukturiramo sadržaj web stranica?
+Strukturiranje sadržaja web stranica poboljšava korisničko iskustvo, pristupačnost i SEO, te olakšava održavanje koda.
+
+43. Koji su nesemantički strukturni elementi?
+<div></div> ; <span></span> 
+43.	Navedite primjere semantičkih strukturnih elementa.
+<header>, <nav>, <main>, <article>, <section>, <aside>, <footer>, <figure> i <figcaption>
+44.	Koji strukturni element koristimo ako sadržaj grupiramo samo zbog stiliziranja CSS-om, bez da mu damo semantičko značenje?
+Ako želimo grupirati sadržaj samo zbog stiliziranja CSS-om, bez dodavanja semantičkog značenja, koristimo <div> element. <div> je generički kontejner koji se koristi za grupiranje elemenata i primjenjivanje stilova bez ikakvog semantičkog značenja.
+
+
+    </p>
+</body>
+</html>
